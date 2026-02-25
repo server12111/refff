@@ -14,7 +14,7 @@ def _get_client() -> FlyerClient | None:
         return None
     global _client
     if _client is None:
-        _client = FlyerClient(config.FLYER_KEY)
+ _client = FlyerClient(config.FLYER_KEY, debug=True)
     return _client
 
 
@@ -42,3 +42,4 @@ async def check_subscription(user_id: int, language_code: str | None = None) -> 
     except Exception as exc:
         logger.warning("Flyer API error for user %s: %s", user_id, exc)
         return True  # on error — allow access so users are not blocked
+
