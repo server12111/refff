@@ -1,0 +1,80 @@
+2026-02-20 15:00:34,494 INFO __main__: Bot started
+2026-02-20 15:00:34,494 INFO aiogram.dispatcher: Start polling
+2026-02-20 15:00:34,617 INFO aiogram.dispatcher: Run polling for bot @Serverkskssk_bot id=7795921940 - 'Server'
+2026-02-20 15:01:44,506 INFO aiogram.event: Update id=158368008 is handled. Duration 280 ms by bot id=7795921940
+2026-02-20 15:01:45,903 INFO aiogram.event: Update id=158368009 is handled. Duration 125 ms by bot id=7795921940
+2026-02-20 15:01:46,970 INFO aiogram.event: Update id=158368010 is handled. Duration 93 ms by bot id=7795921940
+2026-02-20 15:01:47,490 INFO aiogram.event: Update id=158368011 is not handled. Duration 16 ms by bot id=7795921940
+2026-02-20 15:01:47,490 ERROR aiogram.event: Cause exception while process update id=158368011 by bot id=7795921940
+ValueError: invalid literal for int() with base 10: '24.0'
+Traceback (most recent call last):
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\fsm\storage\memory.py", line 56, in lock
+    yield
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\referral_bot\middlewares\register.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\referral_bot\middlewares\register.py", line 77, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Sierafim\referral_bot\handlers\bonus.py", line 28, in cb_bonus
+    cooldown_hours = int(cooldown_row.value) if cooldown_row else config.BONUS_COOLDOWN_HOURS
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '24.0'
+2026-02-20 15:01:49,655 INFO aiogram.event: Update id=158368012 is handled. Duration 108 ms by bot id=7795921940
+2026-02-20 15:01:50,423 INFO aiogram.event: Update id=158368013 is handled. Duration 109 ms by bot id=7795921940
+2026-02-20 15:01:51,130 INFO aiogram.event: Update id=158368014 is handled. Duration 108 ms by bot id=7795921940
+2026-02-20 15:01:51,814 INFO aiogram.event: Update id=158368015 is handled. Duration 92 ms by bot id=7795921940
+2026-02-20 15:01:52,377 INFO aiogram.event: Update id=158368016 is handled. Duration 110 ms by bot id=7795921940
+2026-02-20 15:01:52,846 INFO aiogram.event: Update id=158368017 is handled. Duration 93 ms by bot id=7795921940
+2026-02-20 15:01:53,193 INFO aiogram.event: Update id=158368018 is handled. Duration 108 ms by bot id=7795921940
+2026-02-20 15:01:57,850 INFO aiogram.event: Update id=158368019 is handled. Duration 108 ms by bot id=7795921940
