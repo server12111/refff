@@ -4,4 +4,5 @@ SQLAlchemy==2.0.35
 aiohttp==3.10.10
 python-dotenv==1.0.1
 aiogram-sqlite-storage==1.0.1
-flyerapi
+flyerapi==1.2.3
+
